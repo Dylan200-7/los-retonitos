@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo · LOS RETOÑITOS</title>
+<meta name="description" content="Explora las 16 categorías de LOS RETOÑITOS: láminas educativas, juegos didácticos, libros, cuentos, rompecabezas, maquetas y material escolar.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="catalogo">
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-top d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center py-1">
+      <div><i class="bi bi-shop"></i>&nbsp; Stand D22 · Cámara Popular de Libreros del Perú, Jr. Amazonas 401</div>
+      <div class="d-flex gap-3">
+        <a href="contacto.html"><i class="bi bi-geo-alt"></i> Encuéntranos</a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="container d-flex align-items-center gap-3">
+      <!-- TODO (reemplazar): logo real de LOS RETOÑITOS -->
+      <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none flex-shrink-0">
+        <img
+            src="assets/logo/logo.png"
+            alt="Los Retoñitos"
+            class="logo-img-footer">
+        <div>
+          <div class="brand-name">LOS RETOÑITOS</div>
+          <div class="brand-tagline">EL MUNDO DE LAS LÁMINAS</div>
+        </div>
+      </a>
+
+      <form class="search-form d-none d-md-flex ms-3" role="search" data-search-form>
+        <input type="search" class="form-control" placeholder="Buscar láminas, juegos, libros..." data-search-input aria-label="Buscar productos">
+        <button class="btn" type="submit" aria-label="Buscar"><i class="bi bi-search"></i></button>
+      </form>
+
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a href="https://wa.me/51987611863" target="_blank" rel="noopener" class="btn btn-whatsapp d-none d-lg-inline-flex align-items-center gap-2">
+          <i class="bi bi-whatsapp"></i> Pedidos
+        </a>
+        <a href="carrito.html" class="btn-icon-circle" aria-label="Ver carrito de compras">
+          <i class="bi bi-cart3 fs-5"></i>
+          <span class="badge-cart" data-cart-count style="display:none;">0</span>
+        </a>
+        <button class="btn-icon-circle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovil" aria-label="Abrir menú">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav-main d-none d-lg-block">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" data-nav="inicio" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" data-nav="catalogo" href="catalogo.html">Productos</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="catalogo.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="catalogo.html?categoria=laminas-educativas">Láminas Educativas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=juegos-didacticos">Juegos Didácticos</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=libros-didacticos">Libros Didácticos</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=rompecabezas">Rompecabezas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=maquetas-escolares">Maquetas Escolares</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=materiales-maquetas">Materiales para Maquetas</a></li>
+            <li><a class="dropdown-item" href="catalogo.html?categoria=material-escolar">Material Escolar</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item fw-semibold" href="catalogo.html">Ver todas las categorías <i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" data-nav="nosotros" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" data-nav="contacto" href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menuMovil" aria-labelledby="menuMovilLabel">
+  <div class="offcanvas-header offcanvas-brand-header border-bottom">
+    <h5 class="offcanvas-title brand-name" id="menuMovilLabel">LOS RETOÑITOS</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body offcanvas-brand-header">
+    <form class="search-form d-flex mb-3" role="search" data-search-form>
+      <input type="search" class="form-control" placeholder="Buscar..." data-search-input aria-label="Buscar productos">
+      <button class="btn" type="submit" aria-label="Buscar"><i class="bi bi-search"></i></button>
+    </form>
+    <ul class="nav flex-column">
+      <li><a class="nav-link" data-nav="inicio" href="index.html">Inicio</a></li>
+      <li><a class="nav-link" data-nav="catalogo" href="catalogo.html">Productos</a></li>
+      <li><a class="nav-link" data-nav="catalogo" href="catalogo.html">Categorías</a></li>
+      <li><a class="nav-link" data-nav="nosotros" href="nosotros.html">Nosotros</a></li>
+      <li><a class="nav-link" data-nav="contacto" href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/51987611863" target="_blank" rel="noopener" class="btn btn-whatsapp w-100 mt-3">
+      <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
+    </a>
+  </div>
+</div>
+
+
+<!-- ===================== BREADCRUMB ===================== -->
+<div class="breadcrumb-bar bg-blue-light">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Productos</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- ===================== CATÁLOGO ===================== -->
+<section class="section-pad py-4">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Filtros -->
+      <div class="col-lg-3">
+        <div class="filters-panel">
+          <h4>Buscar</h4>
+          <div class="input-group mb-1">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input type="search" class="form-control border-start-0" id="filtro-buscar" placeholder="Nombre del producto">
+          </div>
+
+          <hr>
+
+          <!-- Se genera dinámicamente desde catalogo.js a partir de CATEGORIAS (16 categorías) -->
+          <h4>Categorías</h4>
+          <div id="filtro-categorias"></div>
+
+          <hr>
+
+          <h4>Rango de precio</h4>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="small text-ink-soft">S/</span>
+            <input type="number" class="form-control form-control-sm" id="precio-min" placeholder="Mín" min="0">
+            <span class="small text-ink-soft">—</span>
+            <input type="number" class="form-control form-control-sm" id="precio-max" placeholder="Máx" min="0">
+          </div>
+
+          <hr>
+
+          <button class="btn btn-brand-outline w-100" id="btn-limpiar-filtros">
+            <i class="bi bi-arrow-counterclockwise"></i> Limpiar filtros
+          </button>
+        </div>
+      </div>
+
+      <!-- Resultados -->
+      <div class="col-lg-9">
+        <div class="toolbar-catalog d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <div class="text-ink-soft small" id="contador-resultados">Mostrando productos</div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <select class="form-select form-select-sm" id="orden-select" style="width:auto;">
+              <option value="recientes">Más recientes</option>
+              <option value="menor-precio">Menor precio</option>
+              <option value="mayor-precio">Mayor precio</option>
+              <option value="mas-vendidos">Más vendidos</option>
+            </select>
+            <div class="view-toggle btn-group" role="group" aria-label="Cambiar vista">
+              <button type="button" class="btn active" id="vista-grid" aria-label="Vista de cuadrícula"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+              <button type="button" class="btn" id="vista-lista" aria-label="Vista de lista"><i class="bi bi-list-ul"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4" id="grid-catalogo"></div>
+        <div class="empty-state d-none" id="estado-vacio">
+          <i class="bi bi-search fs-1 d-block mb-3"></i>
+          <h3 class="h5">No encontramos productos con esos filtros</h3>
+          <p>Prueba ajustando la categoría, el precio o el término de búsqueda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <!-- TODO (reemplazar): logo real -->
+        <a href="index.html" class="d-flex align-items-center gap-2 mb-3 text-decoration-none">
+          <img
+              src="assets/logo/logo.png"
+              alt="Los Retoñitos"
+              class="logo-img-footer">
+          <div>
+            <span class="brand-name d-block" style="color:#fff;">LOS RETOÑITOS</span>
+            <span class="small" style="color:rgba(255,255,255,0.7);">El Mundo de las Láminas</span>
+          </div>
+        </a>
+        <p style="max-width:320px;">Materiales educativos, juegos didácticos y material escolar para niños, jóvenes, adultos, docentes e instituciones.</p>
+        <div class="footer-social mt-3">
+          <!-- TODO (reemplazar): enlaces reales a redes sociales -->
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/51987611863" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h5>Enlaces</h5>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 col-6">
+        <h5>Categorías</h5>
+        <ul>
+          <li><a href="catalogo.html?categoria=laminas-educativas">Láminas Educativas</a></li>
+          <li><a href="catalogo.html?categoria=juegos-didacticos">Juegos Didácticos</a></li>
+          <li><a href="catalogo.html?categoria=rompecabezas">Rompecabezas</a></li>
+          <li><a href="catalogo.html?categoria=materiales-maquetas">Materiales para Maquetas</a></li>
+          <li><a href="catalogo.html">Ver todas →</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Contacto</h5>
+        <ul>
+          <li><i class="bi bi-geo-alt me-2"></i>Cámara Popular de Libreros del Perú, Jr. Amazonas N° 401, Alt. Puente Balta - Esq. con Andahuaylas</li>
+          <li><i class="bi bi-whatsapp me-2"></i>987 611 863 / 992 321 037</li>
+          <li><i class="bi bi-clock me-2"></i>Lun. a Sáb. 9:00 am – 7:00 pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© 2026 LOS RETOÑITOS — El Mundo de las Láminas. Todos los derechos reservados.</span>
+      <span>Contenido de ejemplo — sitio en preparación.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/51987611863" target="_blank" rel="noopener" class="whatsapp-float d-lg-none" aria-label="Escríbenos por WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config/config.js"></script>
+<script src="js/data/categorias.js"></script>
+<script src="js/data/productos.js"></script>
+<script src="js/services/carritoService.js"></script>
+<script src="js/services/whatsappService.js"></script>
+<script src="js/ui/header.js"></script>
+<script src="js/catalogo.js"></script>
+</body>
+</html>
